@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import Navbar from '../components/Navbar'
+import Image from 'next/image';
+import Link from 'next/link';
+
 const HomePage = () => {
   const [interests, setInterests] = useState(['Baking', 'Frontend Programming', 'Web Design']);
 
@@ -9,17 +12,19 @@ const HomePage = () => {
 
   return (
     <div className="container mx-auto p-4">
-      <h1 className="text-4xl font-bold text-center my-6">Hi, Welcome to Ayesha's Website!</h1>
+     <h1 className="text-4xl font-bold text-center my-6">Hi, Welcome to Ayesha&apos;s Website!</h1>
+
       <section className="my-8 text-center">
         <p>I am a senior Computer Science student with a passion for frontend programming and creating websites.</p>
         {/* Image component */}
-        <img
+        <Image
           src="/baking.jpg"
           alt="Ayesha"
           width={150}
           height={150}
           className="rounded-full mx-auto"
         />
+
       </section>
       <section className="my-8">
         <h2 className="text-2xl font-bold text-center">Things That Interest Me</h2>
