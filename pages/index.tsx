@@ -11,8 +11,11 @@ const HomePage = () => {
   };
 
   return (
-    <div className="container mx-auto p-4">
-     <h1 className="text-4xl font-bold text-center my-6">Hi, Welcome to Ayesha&apos;s Website!</h1>
+    <div className="container mx-auto p-4" style={{ backgroundColor: '#E6F2FF' }}> {/* Apply style here */}
+      <div className="text-center">
+        <a href="/ThingsToRead" className="text-blue-500 hover:underline">Things to Read</a>
+      </div>
+      <h1 className="text-4xl font-bold text-center my-6">Hi, Welcome to Ayesha&apos;s Website!</h1>
 
       <section className="my-8 text-center">
         <p>I am a senior Computer Science student with a passion for frontend programming and creating websites.</p>
@@ -24,7 +27,6 @@ const HomePage = () => {
           height={150}
           className="rounded-full mx-auto"
         />
-
       </section>
       <section className="my-8">
         <h2 className="text-2xl font-bold text-center">Things That Interest Me</h2>
@@ -44,9 +46,6 @@ const HomePage = () => {
         </div>
       </section>
       {/* Link to "Things to Read" page */}
-      <div className="text-center">
-        <a href="/ThingsToRead" className="text-blue-500 hover:underline">Things to Read</a>
-      </div>
     </div>
   );
 };

@@ -23,31 +23,32 @@ const ThingsToRead = () => {
   };
 
   return (
-    <>
-      <Link href="/" passHref={true} legacyBehavior={true}>
-        <a>Home</a>
-      </Link>
-      <h1>Things to Read</h1>
-      <ul>
-        {links.map((link, index) => (
-          <li key={index}>
-            <button
-              onClick={() => handleKeyPress(link.url)} // Handle click
-              onKeyPress={(e) => {
-                if (e.key === 'Enter') {
-                  handleKeyPress(link.url); // Handle Enter key press
-                }
-              }}
-              tabIndex={0} // Ensure button is focusable
-            >
-              {link.title}
-            </button>
-          </li>
-        ))}
-      </ul>
-    </>
+    <div style={{ backgroundColor: '#E6F2FF', padding: '20px' }}> {/* Light blue background */}
+      <>
+        <Link href="/" passHref={true} legacyBehavior={true}>
+          <a>Home</a>
+        </Link>
+        <h1>Things to Read</h1>
+        <ul>
+          {links.map((link, index) => (
+            <li key={index}>
+              <button
+                onClick={() => handleKeyPress(link.url)} // Handle click
+                onKeyPress={(e) => {
+                  if (e.key === 'Enter') {
+                    handleKeyPress(link.url); // Handle Enter key press
+                  }
+                }}
+                tabIndex={0} // Ensure button is focusable
+              >
+                {link.title}
+              </button>
+            </li>
+          ))}
+        </ul>
+      </>
+    </div>
   );
 };
 
 export default ThingsToRead;
-
