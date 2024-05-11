@@ -19,10 +19,10 @@ const ThingsToRead = () => {
   ];
 
   // Function to handle clicking and pressing Enter key
-  const handleKeyPress = (url) => {
+  const handleKeyPress = (url: string) => {
     window.open(url, '_blank');
   };
-
+  
   return (
     <div style={{ backgroundColor: '#E6F2FF', padding: '20px' }}> {/* Light blue background */}
       <>
