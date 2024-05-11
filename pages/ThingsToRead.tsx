@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import 'tailwindcss/tailwind.css';
 
 const ThingsToRead = () => {
   // Array of links to external websites
@@ -29,6 +30,7 @@ const ThingsToRead = () => {
           <a>Home</a>
         </Link>
         <h1>Things to Read</h1>
+        <h2>My Portfolio </h2>
         <ul>
           {links.map((link, index) => (
             <li key={index}>

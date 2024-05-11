@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Navbar from '../components/Navbar'
 import Image from 'next/image';
 import Link from 'next/link';
+import 'tailwindcss/tailwind.css';
 
 const HomePage = () => {
   const [interests, setInterests] = useState(['Baking', 'Frontend Programming', 'Web Design']);
@@ -14,6 +15,9 @@ const HomePage = () => {
     <div className="container mx-auto p-4" style={{ backgroundColor: '#E6F2FF' }}> {/* Apply style here */}
       <div className="text-center">
         <a href="/ThingsToRead" className="text-blue-500 hover:underline">Things to Read</a>
+      </div>
+      <div className="text-center">
+        <a href="/PortfolioPage" className="text-blue-500 hover:underline">My Portfolio </a>
       </div>
       <h1 className="text-4xl font-bold text-center my-6">Hi, Welcome to Ayesha&apos;s Website!</h1>
 
