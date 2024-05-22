@@ -22,18 +22,19 @@ const ThingsToRead = () => {
   const handleKeyPress = (url: string) => {
     window.open(url, '_blank');
   };
-  
+
   return (
-    <div style={{ backgroundColor: '#E6F2FF', padding: '20px' }}> {/* Light blue background */}
-      <>
-        <Link href="/" passHref={true} legacyBehavior={true}>
-          <a>Home</a>
-        </Link>
-        <h1>Things to Read</h1>
-        <h2>My Portfolio </h2>
-        <ul>
+    <div className="min-h-screen bg-blue-100 p-4" style={{ backgroundColor: '#E6F2FF' }}> {/* Light blue background */}
+      <div className="container mx-auto">
+        <div className="flex justify-end items-center mb-4">
+          <Link href="/" className="text-blue-500 hover:underline mr-4">Home</Link>
+          <Link href="/ThingsToRead" className="text-blue-500 hover:underline mr-4">Things to Read</Link>
+          <Link href="/PortfolioPage" className="text-blue-500 hover:underline">My Portfolio</Link>
+        </div>
+        <h1 className="text-2xl font-bold text-center mb-6">My Reading List</h1>
+        <ul className="list-disc list-inside">
           {links.map((link, index) => (
-            <li key={index}>
+            <li key={index} className="my-2">
               <button
                 onClick={() => handleKeyPress(link.url)} // Handle click
                 onKeyPress={(e) => {
@@ -42,15 +43,18 @@ const ThingsToRead = () => {
                   }
                 }}
                 tabIndex={0} // Ensure button is focusable
+                className="text-blue-500 hover:underline"
               >
                 {link.title}
               </button>
             </li>
           ))}
         </ul>
-      </>
+      </div>
     </div>
   );
 };
 
 export default ThingsToRead;
+
+
